@@ -1,0 +1,16 @@
+{
+  "components-shared.SigninForm.createAccount": "Créer un compte",
+  "components-shared.SigninForm.dontHaveAccount": "Pas de compte ? {createAccount}",
+  "components-shared.SigninForm.forgottenPassword": "Mot de passe oublié",
+  "components-shared.SigninForm.identifier": "Nom d'utilisateur ou email",
+  "components-shared.SigninForm.ifYouClickText": "Si vous cliquez sur \"Facebook\" ou \"Google\" et que vous n'avez pas de compte sur Ceacle, alors vous serez inscrit et vous acceptez nos {terms} et notre {privacy}",
+  "components-shared.SigninForm.with": "Avec",
+  "components-shared.SigninForm.orWithEmail": "Ou avec email",
+  "components-shared.SigninForm.password": "Mot de passe",
+  "components-shared.SigninForm.privacy": "politique de confidentalité",
+  "components-shared.SigninForm.signIn": "Se connecter",
+  "components-shared.SigninForm.terms": "conditions d'utilisation",
+  "components-shared.SigninForm.username": "Nom d'utilisateur",
+  "components-shared.SigninForm.validRequiredField": "Ce champs est requis",
+  "components-shared.SigninForm.validAtLeastChar": "Doit contenir au moins {number} caractères"
+}

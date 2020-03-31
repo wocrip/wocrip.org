@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8">
+
+    <!-- Send only the base url to third party servers -->
+    <meta name="referrer" content="origin">
+
+    <!-- For SEO -->
+    <meta name="fragment" content="!">
+
+    <!-- Make the page mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Allow installing the app to the homescreen -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn1.ceacle.com/modo/images/icons-3/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn1.ceacle.com/modo/images/icons-3/icon@32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn1.ceacle.com/modo/images/icons-3/icon@16.png">
+    <link rel="mask-icon" href="https://cdn1.ceacle.com/modo/images/icons-3/safari-pinned-tab.svg" color="#4680e8">
+    <meta name="apple-mobile-web-app-title" content="Ceacle Modo">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="https://cdn1.ceacle.com/modo/images/icons-3/favicon.ico" />
+    <!-- Load Polyfills -->
+    <!-- https://gist.github.com/CarlPhilippe/1579acd5b78d80359401c1cbe0acd2db -->
+    <script>
+      const polyfills=[{src:"https://cdn1.ceacle.com/libs/promise-polyfill.js",needed:function(){return!("Promise"in window)}},{src:"https://cdn1.ceacle.com/libs/whatwg-fetch-polyfill.js",needed:function(){return!("fetch"in window)}},{src:"https://cdn1.ceacle.com/libs/intl/intl-polyfill.js",needed:function(){return!("Intl"in window)},optional:function(){let n="https://cdn1.ceacle.com/libs/intl/locale-data/jsonp/en.js";return-1===(window.navigator.userLanguage||window.navigator.language||"en-US").indexOf("fr")&&(n="https://cdn1.ceacle.com/libs/intl/locale-data/jsonp/fr.js"),n}},{src:"https://cdn1.ceacle.com/libs/core-js-polyfill.js",needed:function(){return!("startsWith"in String.prototype&&"endsWith"in String.prototype&&"includes"in Array.prototype&&"assign"in Object&&"keys"in Object)}}];polyfills.forEach(function(n){const e=n.src,t=n.needed,c=n.optional;function i(n){const e=document.createElement("script");e.src=n,e.async=!1,document.head.appendChild(e)}t()&&(i(e),c&&i(c))});
+    </script>
+  </head>
+  <body>
+    <!-- Display a message if JS has been disabled on the browser. -->
+    <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser.</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
+
+    <!-- Display Loader for first paint -->
+    <div id="firstPaint">
+      <div id="logo">
+        App starter
+      </div>
+
+      <div id="loading">
+        Loading...
+      </div>
+
+      <style>
+        #firstPaint {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100vh;
+          flex-direction: column;
+        }
+
+        #logo {
+          font-family: acumin-pro-extra-condensed, sans-serif;
+          font-size: 60px;
+          color: #4c89ff;
+          text-align: center;
+          height: 80px;
+        }
+
+        #loading {
+          font-family: acumin-pro-semi-condensed, sans-serif;
+          font-size: 20px;
+          color: #888;
+          text-align: center;
+        }
+      </style>
+    </div>
+    <!-- Display Loader for first paint -->
+
+    <!-- The app hooks into this div -->
+    <div id="app"></div>
+    <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out the webpack config files in internals/webpack for details) -->
+
+    <!-- Keep a site's Typekit in localStorage -->
+    <!-- https://github.com/morris/typekit-cache -->
+    <script>
+      !function(e,t,n,a,c,l,m,o,d,f,h,i){c[l]&&(d=e.createElement(t),d[n]=c[l],e[a]("head")[0].appendChild(d),e.documentElement.className+=" wf-cached"),function s(){for(d=e[a](t),f="",h=0;h<d.length;h++)i=d[h][n],i.match(m)&&(f+=i);f&&(c[l]="/**/"+f),setTimeout(s,o+=o)}()}(document,"style","innerHTML","getElementsByTagName",localStorage,"tk",/^@font|^\.tk-/,100);
+    </script>
+
+    <!-- Load Font -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ses7bdf',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+    <script>
+      // Hack to force styled components to render styles during prerender
+      if(typeof navigator !== 'undefined' && /prerender/i.test(navigator.userAgent)) {
+        window.onload = () => {
+          var el = document.createElement('style')
+          document.head.appendChild(el)
+          var styles = document.querySelectorAll('style[data-styled]')
+          for (style of styles.values()) {
+            for (rule of style.sheet.rules) {
+              el.appendChild(document.createTextNode(rule.cssText))
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+import { lighten } from 'polished'
+
+
+const palette = {
+  aqua: '#31ecd9',
+  // aqua: '#36ccbc',
+  black: '#101017',
+  // black: '#343240',
+  blue: '#26c7ec',
+  // blue: '#23bde1',
+  brown: '#d69f83',
+  // brown: '#b9886f',
+  deepblue: '#4c89ff',
+  // deepblue: '#4680f0',
+  deepblack: '#030305',
+  gray: '#99989f',
+  green: '#15cc5a',
+  // green: '#1ec35c',
+  greenapple: '#aaea4e',
+  // greenapple: '#98cb4f',
+  orange: '#ff8924',
+  // orange: '#f58220',
+  deeporange: '#ff5c38',
+  // deeporange: '#f05330',
+  pink: '#ff629a',
+  // pink: '#f06798',
+  purple: '#7c62ff',
+  // purple: '#7966d8',
+  red: '#ff3952',
+  // red: '#f14056',
+  transparent: '#00000000',
+  white: '#ffffff',
+  yellow: '#ffb843',
+  // yellow: '#fbb034',
+}
+
+export const colors = {
+  ...palette,
+  gray: lighten(0.5, palette.black),
+  primary: palette.deepblue,
+  background: palette.black,
+  brand: palette.black,
+  subBrand: palette.black,
+  text: palette.black,
+  link: palette.deepblue,
+
+  logo: palette.black,
+
+  // Status
+  error: palette.red,
+  warning: palette.orange,
+  danger: palette.red,
+  success: palette.green,
+  visited: palette.purple,
+  hover: palette.deepblue,
+  active: palette.deepblue,
+  drop: palette.deepblack,
+  dragOver: palette.deepblue,
+  dragLeave: palette.deepblack,
+}

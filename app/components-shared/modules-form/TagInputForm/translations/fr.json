@@ -1,0 +1,8 @@
+{
+  "components-shared.TagInputForm.addOnlyFromSuggestion": "Ajouter seulement depuis les suggestions",
+  "components-shared.TagInputForm.maximumAllowed": "Maximum autorisé: {count}.",
+  "components-shared.TagInputForm.validAtLeastChar": "Doit contenir au moins {number} caractères.",
+  "components-shared.TagInputForm.validMultipleSpacesNotAllowed": "Multiples espaces ne sont pas autorisés.",
+  "components-shared.TagInputForm.validNoMoreChar": "Doit contenir au moins {number} caractères.",
+  "components-shared.TagInputForm.validOnlyCharTagName": "Uniquement des caractères a-z, 0-9."
+}

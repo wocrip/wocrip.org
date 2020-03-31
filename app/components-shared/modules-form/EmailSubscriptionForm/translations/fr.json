@@ -1,0 +1,9 @@
+{
+  "components-shared.EmailSubscriptionForm.subscribe": "Souscrire",
+  "components-shared.EmailSubscriptionForm.emailIsInvalid": "Email est invalide",
+  "components-shared.EmailSubscriptionForm.placeholder": "Adresse email",
+  "components-shared.EmailSubscriptionForm.requiredEmailAddress": "L'adresse email est nécessaire",
+  "components-shared.EmailSubscriptionForm.requiredConsent": "Votre consentement est requis",
+  "components-shared.EmailSubscriptionForm.spaceIsNotAllowed": "Espace n'est pas autorisé",
+  "components-shared.EmailSubscriptionForm.successMessage": "Souscrit à"
+}
