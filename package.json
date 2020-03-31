@@ -4,7 +4,7 @@
   "description": "World Crisis Platfform Web App.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/CarlPhilippe/wocrip.org.git"
+    "url": "git://github.com/wocrip/wocrip.org.git"
   },
   "engines": {
     "npm": ">=6",
