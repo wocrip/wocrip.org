@@ -1,0 +1,5 @@
+{
+  "components.NavAccount.navAccount": "Compte",
+  "components.NavAccount.navProfile": "Profile",
+  "components.NavAccount.navSignOut": "Déconnexion"
+}

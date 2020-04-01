@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { graphql, withApollo } from 'react-apollo'
 import Cookies from 'universal-cookie'
 import { withRouter } from 'react-router-dom'
-import styled from 'styled-components'
 import { compose } from 'redux'
 
 import { auth_updateUser } from 'services/user/mutations'
@@ -14,16 +13,9 @@ import { getLocaleSelector } from 'services/intl/LanguageProvider/selectors'
 import setCookieLocale from 'services/intl/LanguageProvider/setCookieLocale'
 import { lang } from 'services/intl/getLocale'
 
-import NavItem from 'components-ceacle/modules/nav/NavAccount/NavItem'
+import NavItem from './NavItem'
 
 
-const Wrapper = styled.div``
-const Separator = styled.div`
-  width: 100%;
-  display: block;
-  margin: 5px 0;
-  height: 1px;
-`
 class LocaleList extends Component {
   constructor(props) {
     super(props)

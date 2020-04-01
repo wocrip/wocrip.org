@@ -13,12 +13,11 @@ import { auth_getUser } from 'services/user/queries'
 
 import HomePage from 'containers/HomePage/Loadable'
 import NotFoundPage from 'containers/NotFoundPage/Loadable'
-import Navbar from 'components-ceacle/modules/nav/Navbar'
+import Navbar from 'components/modules/nav/Navbar'
 // import PrivateRoute from 'components-shared/modules-auth/PrivateRoute'
 // import Authorization from 'components-shared/modules-auth/Authorization'
 import WithTracker from 'components-shared/modules/WithTracker'
 import Wrapper from './Wrapper'
-
 
 // const Developer = Authorization(['developer', 'manager', 'admin'])
 // const Manager = Authorization(['manager', 'admin'])

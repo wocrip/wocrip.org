@@ -4,7 +4,7 @@ import { Flex, Box } from '@rebass/grid'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 
-import Footer from 'components-ceacle/modules/Footer'
+import Footer from 'components/modules/Footer'
 
 import EmailSubscriptionForm from 'components-shared/modules-form/EmailSubscriptionForm'
 import Title from 'components-shared/basics/Title'
@@ -112,7 +112,7 @@ const HomePage = ({
           </Title>
 
           <EmailSubscriptionForm
-            application="modo"
+            application="wocrip"
             consentTexts={[
               {
                 text: formatMessage(messages.receiveNews),
@@ -120,7 +120,7 @@ const HomePage = ({
                 optional: false,
               },
             ]}
-            list="Modo"
+            list="general"
           />
         </Box>
       </Flex>

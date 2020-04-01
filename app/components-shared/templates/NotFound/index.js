@@ -9,7 +9,6 @@ import A from 'components-shared/basics/A'
 import TitleDisplay from 'components-shared/basics/TitleDisplay'
 import Section from 'components-shared/basics/Section'
 import Text from 'components-shared/basics/Text'
-import Footer from 'components-ceacle/modules/Footer'
 
 import messages from './messages'
 
@@ -23,35 +22,32 @@ const NotFound = ({
   size,
   intl: { formatMessage, locale },
 }) => (
-  <Box>
-    <Section
-      flexWrap="wrap"
-      reversed={reversed}
-      py={200}
-    >
-      <Box width={1} px={[30, 50, 80]}>
-        <TitleDisplay
-          size={size}
-          align={align}
-          small={small || formatMessage(messages.small)}
-          color={textColor && textColor}
-        >
-          {title || formatMessage(messages.header)}
-        </TitleDisplay>
-      </Box>
-      <Box width={1} px={[30, 50, 80]} mt={-30} mb={50}>
-        <Text
-          align={align && align}
-        >
-          <A to={`${lang(locale)}/`}>
-            {formatMessage(messages.backHome)}
-          </A>
-        </Text>
-      </Box>
-    </Section>
+  <Section
+    flexWrap="wrap"
+    reversed={reversed}
+    py={200}
+  >
+    <Box width={1} px={[30, 50, 80]}>
+      <TitleDisplay
+        size={size}
+        align={align}
+        small={small || formatMessage(messages.small)}
+        color={textColor && textColor}
+      >
+        {title || formatMessage(messages.header)}
+      </TitleDisplay>
+    </Box>
 
-    <Footer />
-  </Box>
+    <Box width={1} px={[30, 50, 80]} mt={-30} mb={50}>
+      <Text
+        align={align && align}
+      >
+        <A to={`${lang(locale)}/`}>
+          {formatMessage(messages.backHome)}
+        </A>
+      </Text>
+    </Box>
+  </Section>
 )
 
 NotFound.propTypes = {

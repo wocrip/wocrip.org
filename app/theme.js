@@ -13,7 +13,7 @@ import {
   styles as themeStyles,
 } from './themes/ceacle'
 import getColorApp from './themes/ceacle/utils/getColor'
-import Logo from 'components-ceacle/logos/Modo'
+import Logo from 'components/logos/wocrip'
 
 
 export const app = {
