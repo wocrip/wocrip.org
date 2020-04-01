@@ -36,7 +36,7 @@ export const settings = {
   reversed: false,
 
   // Radius used for buttons and corners
-  radius: 8, // px
+  radius: 2, // px
 
   text: {
     size: 1, // em

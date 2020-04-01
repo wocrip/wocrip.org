@@ -208,7 +208,7 @@ const menuStyle = ({ customStyle }, settings) => css`
     height: 32px;
     transform: scale(0.7, 0.7);
     position: absolute;
-    border-radius: 8px;
+    border-radius: 2px;
     background-color: ${rgba(colors.gray, 0.15)};
     opacity: 0;
     z-index: 1;
@@ -243,7 +243,7 @@ const zone = () => css`
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 2px;
   border: 1px dashed ${({ zoneColor, status }) => buttonDropzone({ zoneColor, status })};
   color: ${({ zoneColor, status }) => buttonDropzone({ zoneColor, status })};
   transition: all 0.1s ease-in;
