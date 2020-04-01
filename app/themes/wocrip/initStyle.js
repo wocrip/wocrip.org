@@ -19,7 +19,7 @@ export default css`
   }
 
   body {
-    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.2em;
     color: #101017;
     word-break: normal;

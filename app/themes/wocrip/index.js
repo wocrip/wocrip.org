@@ -18,21 +18,21 @@ export { colors } from './colors'
 
 
 export const app = {
-  companyName: 'Ceacle LLC',
-  mainAppName: 'ceacle',
-  mainAppUrl: 'https://ceacle.com', // Start with https://
-  subApp: true, // If sub of an another application, for instance, account.ceacle.com is subApp of cealce.com
+  companyName: 'World Crisis Platform',
+  mainAppName: 'wocrip',
+  mainAppUrl: 'https://wocrip.org', // Start with https://
+  subApp: false, // If sub app of a platform
   subAppName: 'modo',
-  cookieAuthDomain: '.ceacle.com',
-  cookieMainDomain: '.ceacle.com',
-  legalEmail: 'legal@ceacle.com',
+  cookieAuthDomain: '.wocrip.org',
+  cookieMainDomain: '.wocrip.org',
+  legalEmail: 'legal@wocrip.org',
   intl: true,
   lang: 'en',
   languages,
 }
 
 export const settings = {
-  activeTheme: 'ceacle',
+  activeTheme: 'wocrip',
   reversed: false,
 
   // Radius used for buttons and corners
@@ -68,10 +68,10 @@ export const globalStyle = initStyle
 //
 
 export const auth = {
-  inAppSignIn: false,
-  signInBaseUrl: isDev ? 'http://localhost:3040' : 'https://account.ceacle.com',
-  profileBaseUrl: isDev ? 'http://localhost:3050' : 'https://ceacle.com',
-  accountBaseUrl: isDev ? 'http://localhost:3040' : 'https://account.ceacle.com',
+  inAppSignIn: true,
+  signInBaseUrl: isDev ? 'http://localhost:3040' : 'https://wocrip.org/signin',
+  profileBaseUrl: isDev ? 'http://localhost:3050' : 'https://wocrip.org/profile',
+  accountBaseUrl: isDev ? 'http://localhost:3040' : 'https://wocrip.org/account',
   accountPath: '/',
 }
 

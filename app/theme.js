@@ -11,14 +11,13 @@ import {
   link as themeLink,
   nav as themeNav,
   styles as themeStyles,
-} from './themes/ceacle'
-import getColorApp from './themes/ceacle/utils/getColor'
+} from './themes/wocrip'
+import getColorApp from './themes/wocrip/utils/getColor'
 import Logo from 'components/logos/wocrip'
 
 
 export const app = {
   ...themeApp,
-  subAppName: 'modo',
   logo: Logo,
 }
 
