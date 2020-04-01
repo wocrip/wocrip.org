@@ -12,4 +12,4 @@ phases:
       - yarn build
   post_build:
     commands:
-      - aws s3 sync build/ s3://staging.modo.ceacle.com --delete
+      - aws s3 sync build/ s3://staging.wocrip.org --delete
