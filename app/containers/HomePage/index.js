@@ -41,7 +41,10 @@ const ButtonBlock = styled.div`
   align-items: center;
 `
 const ButtonRow = styled.div`
-  margin: 10px 0;
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 const ButtonCommonStyle = css`
   padding: 10px 20px;
@@ -51,49 +54,49 @@ const ButtonCommonStyle = css`
 const ButtonHelpLeftStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 2px 0 0;
+  margin: 5px 2px 0;
   background-color: ${colors.green};
 `
 const ButtonHelpRightStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 0 0 2px;
+  margin: 5px 2px 0 2px;
   background-color: ${rgba(colors.green, 0.7)};
 `
 const ButtonProduceLeftStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 2px 0 0;
+  margin: 5px 2px 0;
   background-color: ${colors.deepblue};
 `
 const ButtonProduceRightStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 0 0 2px;
+  margin: 5px 2px 0 2px;
   background-color: ${rgba(colors.deepblue, 0.7)};
 `
 const ButtonMissionLeftStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 2px 0 0;
+  margin: 5px 2px 0;
   background-color: ${colors.red};
 `
 const ButtonMissionRightStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 0 0 2px;
+  margin: 5px 2px 0 2px;
   background-color: ${rgba(colors.red, 0.7)};
 `
 const ButtonInitiativeLeftStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 2px 0 0;
+  margin: 5px 2px 0;
   background-color: ${colors.brown};
 `
 const ButtonInitiativeRightStyle = css`
   ${ButtonCommonStyle}
 
-  margin: 0 0 0 2px;
+  margin: 5px 2px 0 2px;
   background-color: ${rgba(colors.brown, 0.7)};
 `
 const HomePage = ({
