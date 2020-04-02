@@ -1,14 +1,16 @@
+import React from 'react'
 import styled, { css } from 'styled-components'
 import { rgba } from 'polished'
+import { withRouter } from 'react-router-dom'
 
 import { colors, nav, settings } from 'theme'
 
 
-const NavWrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   margin: 0;
-  background-color: ${({ reversed }) => reversed ? colors.black : colors.white};
-  color: ${({ reversed }) => reversed ? colors.white : colors.black};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: ${colors.white};
   z-index: ${settings.zindex.navigation};
 
   ${({ visibilityStyle }) => visibilityStyle && css`
@@ -46,9 +48,21 @@ const NavWrapper = styled.div`
   ${({ additionalStyle }) => additionalStyle && additionalStyle}
 `
 
+const NavWrapper = ({
+  location,
+  ...props
+}) => {
+  const isHome = location.pathname === '/'
+  let backgroundColor = isHome ? colors.transparent : colors.black
+
+  return <Wrapper backgroundColor={backgroundColor} {...props} />
+}
+
+
+
 NavWrapper.defaultProps = {
   reversed: nav.reversed,
   size: nav.size,
 }
 
-export default NavWrapper
+export default withRouter(NavWrapper)

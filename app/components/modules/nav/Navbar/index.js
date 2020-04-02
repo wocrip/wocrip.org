@@ -44,7 +44,6 @@ class Navbar extends Component {
   render() {
     let content = ''
     const {
-      adminapps: AdminApps,
       authenticated,
       hiddeServices,
       intl: { formatMessage, locale },
@@ -119,10 +118,6 @@ class Navbar extends Component {
 
           <NavBrand onLogoClick={onLogoClick} />
 
-          {AdminApps &&
-            <AdminApps reversed={nav.reversed} />
-          }
-
           {search && search}
 
           <NavLeft>
@@ -163,7 +158,6 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   authenticated: PropTypes.bool,
-  adminapps: PropTypes.any,
   hiddeServices: PropTypes.bool,
   intl: PropTypes.object,
   items: PropTypes.array,
