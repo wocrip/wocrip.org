@@ -1,3 +1,3 @@
 export default {
-  googleAnalyticsID: 'G-TPKDMRE3WT',
+  googleAnalyticsID: 'UA-162504335-1',
 }
