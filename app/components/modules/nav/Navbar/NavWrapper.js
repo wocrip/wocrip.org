@@ -58,8 +58,6 @@ const NavWrapper = ({
   return <Wrapper backgroundColor={backgroundColor} {...props} />
 }
 
-
-
 NavWrapper.defaultProps = {
   reversed: nav.reversed,
   size: nav.size,
