@@ -39,7 +39,7 @@ export const auth = {
 
 export const colors = {
   ...themeColors,
-  logo: themeColors.deepblue,
+  logo: themeColors.white,
   primary: themeColors.deepblue,
   subBrand: themeColors.deepblue,
 }
