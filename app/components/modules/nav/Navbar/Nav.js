@@ -17,7 +17,7 @@ const Nav = styled.nav`
   align-items: center;
 
   svg {
-    fill: ${({ reversed }) => reversed ? colors.white : colors.black};
+    fill: ${colors.white};
   }
 `
 
