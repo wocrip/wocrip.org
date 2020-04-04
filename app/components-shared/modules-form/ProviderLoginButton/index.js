@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { authProvider } from 'services/config'
+import { authProvider } from 'appConfig'
 import FacebookLogin from './FacebookLogin'
 import GoogleLogin from './GoogleLogin'
 
