@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { styles } from 'theme'
 
 const StyledLink = styled(({
+  customStyle,
   padding,
   margin,
   noBackground,

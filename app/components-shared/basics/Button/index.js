@@ -8,6 +8,7 @@ import StyledButton from './StyledButton'
 
 const Button = (props) => {
   const {
+    customStyle,
     href,
     to,
     children,
@@ -23,7 +24,12 @@ const Button = (props) => {
 
   if (to) {
     button = (
-      <StyledLink to={to} onClick={onClick} {...props}>
+      <StyledLink
+        to={to}
+        onClick={onClick}
+        customStyle={customStyle}
+        {...props}
+      >
         {Children.toArray(children)}
       </StyledLink>
     )
@@ -31,7 +37,11 @@ const Button = (props) => {
 
   if (handleRoute) {
     button = (
-      <StyledButton onClick={onClick} {...props}>
+      <StyledButton
+        onClick={onClick}
+        customStyle={customStyle}
+        {...props}
+      >
         {Children.toArray(children)}
       </StyledButton>
     )
@@ -41,6 +51,7 @@ const Button = (props) => {
 }
 
 Button.propTypes = {
+  customStyle: PropTypes.array,
   handleRoute: PropTypes.bool,
   href: PropTypes.string,
   onClick: PropTypes.func,
