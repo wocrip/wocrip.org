@@ -141,8 +141,9 @@ const Title = (props) => {
 
 Title.propTypes = {
   children: PropTypes.node.isRequired,
+  customStyle: PropTypes.array,
   sub: PropTypes.string,
-  size: PropTypes.string.isRequired,
+  size: PropTypes.string,
   align: PropTypes.string,
   color: PropTypes.string,
   marginTop: PropTypes.string,
