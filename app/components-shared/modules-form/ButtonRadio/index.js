@@ -21,6 +21,8 @@ const LabelBox = styled.div`
 `
 const LabelButton = styled.label`
   ${styles.buttonRadio.label}
+
+  ${({ labelType }) => labelType === 'button' && styles.buttonRadio.labelButton}
 `
 const Input = styled.input`
   ${styles.buttonRadio.input}
@@ -34,9 +36,8 @@ class ButtonRadio extends Component {
     }
 
     this.name = `radios_${Date.now()}`
-    this.optionKeys = props.options.map((option, index) =>
-      `${index}_${randomInt(100, 999)}`
-    )
+    this.optionKeys = props.options
+      .map((option, index) => `${index}_${randomInt(100, 999)}`)
 
     this.handleOnClick = this.handleOnClick.bind(this)
   }
@@ -72,6 +73,7 @@ class ButtonRadio extends Component {
       label,
       labelboxstyle,
       labelColor,
+      labelType,
       labelWeight,
       labelWhiteSpace,
       options,
@@ -112,6 +114,7 @@ class ButtonRadio extends Component {
               <LabelButton
                 key={`${this.name}_label_${this.optionKeys[index]}`}
                 color={color}
+                labelType={labelType}
                 reversed={reversed}
                 labelWhiteSpace={labelWhiteSpace}
                 onClick={() => this.handleOnClick(index)}
@@ -119,7 +122,7 @@ class ButtonRadio extends Component {
               >
                 {option}
               </LabelButton>
-            </LabelBox>
+            </LabelBox>,
           ]))}
         </LabelBoxes>
       </ButtonWrapper>
@@ -127,34 +130,15 @@ class ButtonRadio extends Component {
   }
 }
 
-        // <LabelBox labelboxstyle={labelboxstyle}>
-        //   {options.map((option, index) => ([
-        //     <Input
-        //       key={`${this.name}_input_${this.optionKeys[index]}`}
-        //       type="radio"
-        //       name={this.name}
-        //     />,
-        //     <LabelButton
-        //       key={`${this.name}_label_${this.optionKeys[index]}`}
-        //       color={color}
-        //       reversed={reversed}
-        //       labelWhiteSpace={labelWhiteSpace}
-        //       onClick={() => this.handleOnClick(index)}
-        //       className={index === activeIndex && 'active'}
-        //     >
-        //       {option}
-        //     </LabelButton>,
-        //   ]))}
-        // </LabelBox>
-
 ButtonRadio.propTypes = {
   allowUnselect: PropTypes.bool,
-  initActiveIndex: PropTypes.number.isRequired,
+  initActiveIndex: PropTypes.number,
   color: PropTypes.string,
   getButtonRadioValue: PropTypes.func.isRequired,
   labelboxstyle: PropTypes.array,
   label: PropTypes.string,
   labelColor: PropTypes.string,
+  labelType: PropTypes.string,
   labelWeight: PropTypes.string,
   labelWhiteSpace: PropTypes.string,
   options: PropTypes.array.isRequired,
@@ -164,6 +148,7 @@ ButtonRadio.propTypes = {
 
 ButtonRadio.defaultProps = {
   initActiveIndex: -1,
+  labelType: '',
 }
 
 export default ButtonRadio
