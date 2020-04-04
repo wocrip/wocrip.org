@@ -6,7 +6,7 @@ import { ApolloLink, from } from 'apollo-link'
 
 import getLocale from 'services/intl/getLocale'
 
-import { authEndpoint } from '../config'
+import { authEndpoint } from '../../appConfig'
 
 
 const createBrowserClient = () => {
