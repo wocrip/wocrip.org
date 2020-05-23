@@ -12,6 +12,8 @@ import { authenticatedSelector, userIdSelector } from 'services/user/selectors'
 import { auth_getUser } from 'services/user/queries'
 
 import HomePage from 'containers/HomePage/Loadable'
+import AskHelp from 'containers/Help/Ask/Loadable'
+import OfferHelp from 'containers/Help/Offer/Loadable'
 import NotFoundPage from 'containers/NotFoundPage/Loadable'
 import Navbar from 'components/modules/nav/Navbar'
 // import PrivateRoute from 'components-shared/modules-auth/PrivateRoute'
@@ -48,6 +50,8 @@ const App = ({
 
     <Switch>
       <Route exact path="/:lang([a-z]{2})?" component={WithTracker(HomePage)} />
+      <Route exact path="/:lang([a-z]{2})?ask-help" component={WithTracker(AskHelp)} />
+      <Route exact path="/:lang([a-z]{2})?offer-help" component={WithTracker(OfferHelp)} />
       <Route path="" component={WithTracker(NotFoundPage)} />
     </Switch>
   </Wrapper>

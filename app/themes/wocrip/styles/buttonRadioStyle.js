@@ -13,7 +13,6 @@ const {
 } = getColor
 
 const wrapper = () => css`
-  min-height: ${45}px;
   margin: 10px 0;
   user-select: none;
   position: relative;
@@ -27,43 +26,26 @@ const label = ({ settings }) => css`
   cursor: pointer;
   outline: 0;
   box-sizing: border-box;
-  display: inline-table;
   font-size: ${({ size }) => size || `${settings.text.size}em`};
-  padding: ${({ padding }) => padding || '0.45em 1em 0.5em 1.7em'};
+  ${'' /* padding: ${({ padding }) => padding || '0.45em 1em 0.5em 1.7em'}; */}
   font-weight: 400;
   color: ${({ color }) => buttonRadioLabel({ color })};
   font-family: inherit;
   white-space: ${({ labelWhiteSpace }) => labelWhiteSpace || 'nowrap'};
+  display: flex;
 
   &:before {
     content: "";
-    border: 1px solid ${rgba(colors.black, 0.5)};
+    border: 2px solid ${rgba(colors.black, 0.5)};
     border-radius: 100%;
     width: 17px;
     height: 17px;
-    position: absolute;
-    top: 7px;
-    left: 0;
     z-index: 1;
+    margin-right: 10px;
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    border-radius: 100%;
-    top: 7px;
-    left: 0;
+  &.active&:before {
     background-color: ${({ color }) => buttonBackground({ color }, colors)};
-    width: 17px;
-    height: 17px;
-    z-index: -1;
-    transition: all 0.1s linear;
-    opacity: 0;
-    z-index: 0;
-  }
-
-  &.active&:after {
-    opacity: 1;
   }
 
   &:disabled {
@@ -81,6 +63,22 @@ const label = ({ settings }) => css`
     left: 0;
   }
 `
+const labelButton = ({ settings }) => css`
+  ${label({ settings })}
+
+  border: 2px solid ${rgba(colors.black, 0.2)};
+  padding: 10px;
+  border-radius: 2px;
+
+  &.active {
+    border: 2px solid ${({ color }) => buttonBackground({ color }, colors)};
+    ${'' /* box-shadow: ${`0 0 0 2px ${rgba(colors.deepblue, 0.4)}`}; */}
+  }
+
+  &.focus {
+    box-shadow: ${`0 0 0 2px ${rgba(colors.deepblue, 0.4)}`};
+  }
+`
 const input = () => css`
   pointer-events: none;
   visibility: hidden;
@@ -90,6 +88,7 @@ const input = () => css`
 const buttonRadioStyle = ({ settings }) => ({
   wrapper: wrapper({ settings }),
   label: label({ settings }),
+  labelButton: labelButton({ settings }),
   input: input({ settings }),
 })
 

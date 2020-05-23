@@ -78,7 +78,7 @@ export default {
   inputBackground: ({ reversed, color }) => {
     const baseColor = reversed
       ? lighten(0.05, backColor)
-      : lighten(0.87, backColor)
+      : lighten(0.84, backColor)
     return findColor({ color }) || baseColor
   },
 

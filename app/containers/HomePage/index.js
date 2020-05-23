@@ -122,12 +122,14 @@ const HomePage = ({
           <ButtonRow>
             <Button
               customStyle={ButtonHelpLeftStyle}
+              to="/offer-help"
             >
               Can help
             </Button>
 
             <Button
               customStyle={ButtonHelpRightStyle}
+              to="/ask-help"
             >
               Need help
             </Button>
